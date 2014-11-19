@@ -1,2 +1,221 @@
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
+
+html,body,p,a,div,span {
+  font-size:1em;
+  font-family: Georgia, serif;
+  color:#443D33;
+}
+
+ul {
+	list-style:none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  *zoom: 1;
+  max-width: 44em;
+  _width: 44em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body header hgroup {
+  width: 59.09091%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+body header aside {
+  width: 38.63636%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+body section > h3 {
+  width: 18.18182%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+body section > p, body section > ul {
+  width: 79.54545%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+body section#skills > ul li {
+  width: 38.63636%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+@media (max-width: 30em) {
+	body {
+    max-width: 61em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  body:after {
+    content: "";
+    display: table;
+    clear: both; 
+  }
+
+  body header hgroup, body header aside {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  body section > h3 {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  body section > p, body section > ul {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+   }
+
+  body section#skills > ul li {
+    width: 49.18033%;
+    float: left;
+    margin-right: 1.63934%;
+	}
+
+	body section#skills > ul li:nth-child(even) {
+    width: 49.18033%;
+    float: right;
+    margin-right: 0;
+  }
+
+  body h1, body h2, body h3 {
+    text-align: center;
+  }
+
+  body header a {
+    text-align: center;
+  }
+
+  body section h3 {
+    margin-bottom: 10px;
+  }
+
+  body section#skills > ul li {
+    text-align: center;
+  }
+}
+
+body {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+body header, body footer, body section {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 16px 0;
+}
+
+body header aside {
+  text-align: right;
+}
+
+body section > ul > li {
+  padding-bottom: 36px;
+}
+
+body section#skills > ul li {
+  padding-bottom: 8px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, html {
+  font-family: georgia;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2a2a2a;
+}
+
+a {
+  color: #4684d4;
+}
+
+a:hover {
+  color: #145aa4;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+header aside {
+  border-top: 1px dotted #a5a5a5;
+  margin-top: 4px;
+  padding-top: 10px;
+}
+
+header a {
+  display: block;
+}
+
+section {
+  border-top: 1px solid #a5a5a5;
+}
+
+.duration {
+  float: right;
+}

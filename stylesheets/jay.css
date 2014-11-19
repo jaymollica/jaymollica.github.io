@@ -1,0 +1,255 @@
+/* line 2, ../sass/jay.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 24, ../sass/jay.scss */
+html, body, p, a, div, span {
+  font-size: 1em;
+  font-family: Georgia, serif;
+  color: #443D33;
+}
+
+/* line 30, ../sass/jay.scss */
+ul {
+  list-style: none;
+}
+
+/* line 34, ../sass/jay.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 38, ../sass/jay.scss */
+body {
+  *zoom: 1;
+  max-width: 44em;
+  _width: 44em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 48, ../sass/jay.scss */
+body header hgroup {
+  width: 59.09091%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+/* line 55, ../sass/jay.scss */
+body header aside {
+  width: 38.63636%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 63, ../sass/jay.scss */
+body section > h3 {
+  width: 18.18182%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+/* line 70, ../sass/jay.scss */
+body section > p, body section > ul {
+  width: 79.54545%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 78, ../sass/jay.scss */
+body section#skills > ul li {
+  width: 38.63636%;
+  float: left;
+  margin-right: 2.27273%;
+  display: inline;
+}
+
+@media (max-width: 30em) {
+  /* line 86, ../sass/jay.scss */
+  body {
+    max-width: 61em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 94, ../sass/jay.scss */
+  body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* line 100, ../sass/jay.scss */
+  body header hgroup, body header aside {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  /* line 106, ../sass/jay.scss */
+  body section > h3 {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  /* line 112, ../sass/jay.scss */
+  body section > p, body section > ul {
+    width: 100%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  /* line 118, ../sass/jay.scss */
+  body section#skills > ul li {
+    width: 49.18033%;
+    float: left;
+    margin-right: 1.63934%;
+  }
+
+  /* line 124, ../sass/jay.scss */
+  body section#skills > ul li:nth-child(even) {
+    width: 49.18033%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 130, ../sass/jay.scss */
+  body h1, body h2, body h3 {
+    text-align: center;
+  }
+
+  /* line 134, ../sass/jay.scss */
+  body header a {
+    text-align: center;
+  }
+
+  /* line 138, ../sass/jay.scss */
+  body section h3 {
+    margin-bottom: 10px;
+  }
+
+  /* line 142, ../sass/jay.scss */
+  body section#skills > ul li {
+    text-align: center;
+  }
+}
+/* line 147, ../sass/jay.scss */
+body {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+/* line 152, ../sass/jay.scss */
+body header, body footer, body section {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 16px 0;
+}
+
+/* line 158, ../sass/jay.scss */
+body header aside {
+  text-align: right;
+}
+
+/* line 162, ../sass/jay.scss */
+body section > ul > li {
+  padding-bottom: 36px;
+}
+
+/* line 166, ../sass/jay.scss */
+body section#skills > ul li {
+  padding-bottom: 8px;
+}
+
+/* line 170, ../sass/jay.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 174, ../sass/jay.scss */
+body, html {
+  font-family: georgia;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2a2a2a;
+}
+
+/* line 181, ../sass/jay.scss */
+a {
+  color: #4684d4;
+}
+
+/* line 185, ../sass/jay.scss */
+a:hover {
+  color: #145aa4;
+}
+
+/* line 189, ../sass/jay.scss */
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+/* line 193, ../sass/jay.scss */
+h1 {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+/* line 198, ../sass/jay.scss */
+h2 {
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 205, ../sass/jay.scss */
+header aside {
+  border-top: 1px dotted #a5a5a5;
+  margin-top: 4px;
+  padding-top: 10px;
+}
+
+/* line 211, ../sass/jay.scss */
+header a {
+  display: block;
+}
+
+/* line 215, ../sass/jay.scss */
+section {
+  border-top: 1px solid #a5a5a5;
+}
+
+/* line 219, ../sass/jay.scss */
+.duration {
+  float: right;
+}
