@@ -58,23 +58,30 @@ foreach($species AS $s) {
 	$elev = $s['elevation'];
 	if(is_numeric($elev)) {
 		if(!in_array($name, $distincts)) {
-			$distincts[$name] = array();
-			$distincts[$name][$i] = $elev;
+			array_push($distincts,$name);
+			$key = array_search($name, $distincts);
+			$elevations[$key]['name'] = $name;
+			$elevations[$key]['elevs'] = array();
+			array_push($elevations[$key]['elevs'], $elev);
 			//print 'not here-';
 		}
 		else {
-			$distincts[$name][$i] = $elev;
+			$key = array_search($name, $distincts);
+
+			//print '<p>' . $name . '</p>';
+			array_push($elevations[$key]['elevs'], $elev);
 		}
 		//print '<p>' . $s['name'] . ' : ' . $s['elevation'] . '</p>';
 		//$distincts[$name][] = $elev;
+		$i++;
 	}
-
-	$i++;
-	print $i;
-
 }
 
-print '<pre>'; print_r($distincts); print '</pre>';
+foreach($elevations AS $key => $val) {
+	print '<p>' . $val['name'] . ' : ' . $distincts[$key] . '</p>';
+}
+
+print '<pre>'; print_r($elevations); print '</pre>';
 
 //let's count distinct species per habitat
 /*
