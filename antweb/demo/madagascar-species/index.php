@@ -1,5 +1,37 @@
 <?php
 
+function mmmr($array, $output = 'mean'){ 
+  if(!is_array($array)){ 
+      return FALSE; 
+  }else{ 
+      switch($output){ 
+          case 'mean': 
+              $count = count($array); 
+              $sum = array_sum($array); 
+              $total = $sum / $count; 
+          break; 
+          case 'median': 
+              rsort($array); 
+              $middle = round(count($array) / 2); 
+              $total = $array[$middle-1]; 
+          break; 
+          case 'mode': 
+              $v = array_count_values($array); 
+              arsort($v); 
+              foreach($v as $k => $v){$total = $k; break;} 
+          break; 
+          case 'range': 
+              sort($array); 
+              $sml = $array[0]; 
+              rsort($array); 
+              $lrg = $array[0]; 
+              $total = $lrg - $sml; 
+          break; 
+      } 
+      return $total; 
+  } 
+} 
+
 //this file is just meant for ad hoc processing of large data sets, eventually I'd like to turn it into OO classes once we figure out some typical use cases
 
 $specimen = file_get_contents('madagascar-strumigenys.json');
@@ -63,25 +95,49 @@ foreach($species AS $s) {
 			$elevations[$key]['name'] = $name;
 			$elevations[$key]['elevs'] = array();
 			array_push($elevations[$key]['elevs'], $elev);
-			//print 'not here-';
 		}
 		else {
 			$key = array_search($name, $distincts);
 
-			//print '<p>' . $name . '</p>';
 			array_push($elevations[$key]['elevs'], $elev);
 		}
-		//print '<p>' . $s['name'] . ' : ' . $s['elevation'] . '</p>';
-		//$distincts[$name][] = $elev;
+
 		$i++;
 	}
 }
 
+$distros = array();
+$i = 0;
+
 foreach($elevations AS $key => $val) {
-	print '<p>' . $val['name'] . ' : ' . $distincts[$key] . '</p>';
+	$count = count($val['elevs']);
+	$min = min($val['elevs']);
+	$max = max($val['elevs']);
+	$mean = mmmr($val['elevs'],'mean');
+	$median = mmmr($val['elevs'],'median');
+	$mode = mmmr($val['elevs'],'mode');
+	$range = mmmr($val['elevs'],'range');
+
+	$distros[$i]['species'] = $val['name'];
+	$distros[$i]['count'] = $count;
+	$distros[$i]['min'] = $min;
+	$distros[$i]['max'] = $max;
+	$distros[$i]['mean'] = $mean;
+	$distros[$i]['median'] = $median;
+	$distros[$i]['mode'] = $mode;
+	$distros[$i]['range'] = $range;
+
+	$i++;
+
 }
 
-print '<pre>'; print_r($elevations); print '</pre>';
+$species = '';
+$species['distros'] = $distros;
+
+$species = json_encode($species);
+
+print $species;
+
 
 //let's count distinct species per habitat
 /*
@@ -378,7 +434,5 @@ $data = json_encode($data);
 print $data;
 
 */
-
-
 
 ?>
