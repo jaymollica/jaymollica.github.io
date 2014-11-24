@@ -2,7 +2,7 @@
 
 //this file is just meant for ad hoc processing of large data sets, eventually I'd like to turn it into OO classes once we figure out some typical use cases
 
-$specimen = file_get_contents('madagascar-1970-2014.json');
+$specimen = file_get_contents('madagascar-strumigenys.json');
 
 $specimen = json_decode($specimen);
 
@@ -48,9 +48,36 @@ foreach($specimen->specimens AS $s) {
 	$i++;
 }
 
+//let's check out elevation distributions per species
 
+$distincts = array();
+$elevations = array();
+$i = 0;
+foreach($species AS $s) {
+	$name = $s['name'];
+	$elev = $s['elevation'];
+	if(is_numeric($elev)) {
+		if(!in_array($name, $distincts)) {
+			$distincts[$name] = array();
+			$distincts[$name][$i] = $elev;
+			//print 'not here-';
+		}
+		else {
+			$distincts[$name][$i] = $elev;
+		}
+		//print '<p>' . $s['name'] . ' : ' . $s['elevation'] . '</p>';
+		//$distincts[$name][] = $elev;
+	}
+
+	$i++;
+	print $i;
+
+}
+
+print '<pre>'; print_r($distincts); print '</pre>';
 
 //let's count distinct species per habitat
+/*
 $distincts = array();
 
 foreach($habitats AS $h) {
@@ -129,6 +156,8 @@ foreach($distincts AS $d => $val) {
 $data = json_encode($data);
 
 print $data;
+
+*/
 
 /*
 for($i = 200; $i<=3000; $i + 200) {
