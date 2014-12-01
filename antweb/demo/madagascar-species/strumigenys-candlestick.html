@@ -22,10 +22,15 @@
       };
 
 
-      var dateFormat = d3.time.format("%Y-%m-%d");
-      var end = new Date();
-      var start = new Date(end.getTime() - 1000 * 60 * 60 * 24 * 60);
-      var data = [];
+      //var dateFormat = d3.time.format("%Y-%m-%d");
+      //var end = new Date();
+      //var start = new Date(end.getTime() - 1000 * 60 * 60 * 24 * 60);
+      
+      d3.json("candlestick.json", function(error, data) {
+        data.forEach(function(d) {
+        d.habitat = d.habitat;
+        d.count = +d.count;
+      });
 
       function min(a, b){ return a < b ? a : b ; }
       		 		     
@@ -143,8 +148,6 @@
         scriptElement.type = "text/javascript";
         // i add to the url the call back function
         scriptElement.src = url;
-
-        alert(url);
         document.getElementsByTagName("HEAD")[0].appendChild(scriptElement);
       }
 
