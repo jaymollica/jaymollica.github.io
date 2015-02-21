@@ -34,7 +34,7 @@ function mmmr($array, $output = 'mean'){
 
 //this file is just meant for ad hoc processing of large data sets, eventually I'd like to turn it into OO classes once we figure out some typical use cases
 
-$specimen = file_get_contents('madagascar-strumigenys.json');
+$specimen = file_get_contents('madagascar-strumigenys-1970-2014.json');
 
 $specimen = json_decode($specimen);
 
@@ -118,6 +118,7 @@ foreach($elevations AS $key => $val) {
 	$mode = mmmr($val['elevs'],'mode');
 	$range = mmmr($val['elevs'],'range');
 
+
 	$distros[$i]['species'] = $val['name'];
 	$distros[$i]['count'] = $count;
 	$distros[$i]['min'] = $min;
@@ -126,6 +127,7 @@ foreach($elevations AS $key => $val) {
 	$distros[$i]['median'] = $median;
 	$distros[$i]['mode'] = $mode;
 	$distros[$i]['range'] = $range;
+	$distros[$i]['elevationss'] = $val['elevs'];
 
 	$i++;
 
