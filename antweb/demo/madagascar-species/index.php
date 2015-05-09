@@ -127,7 +127,7 @@ foreach($elevations AS $key => $val) {
 	$distros[$i]['median'] = $median;
 	$distros[$i]['mode'] = $mode;
 	$distros[$i]['range'] = $range;
-	$distros[$i]['elevations'] = $val['elevs'];
+	$distros[$i]['elevations'] = sort($val['elevs']);
 
 	$i++;
 
