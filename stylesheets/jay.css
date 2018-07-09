@@ -190,6 +190,10 @@ body section#skills > ul li {
   padding-bottom: 8px;
 }
 
+body section#experience > ul li p {
+  padding-top: 1em;
+}
+
 /* line 170, ../sass/jay.scss */
 html {
   -webkit-font-smoothing: antialiased;
