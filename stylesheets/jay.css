@@ -182,6 +182,13 @@ section {
 li p {
   margin-bottom: 12px; }
 
+#publications h4,
+#interviews h4 {
+  margin-bottom: 12px; }
+
+#presentations h4 {
+  font-weight: normal; }
+
 .duration {
   float: right; }
 
