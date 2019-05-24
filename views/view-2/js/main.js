@@ -191,28 +191,20 @@ function createView() {
 
 var gyroPresent = false;
 
-if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function () {
-        tilt([event.beta, event.gamma]);
-        alert("deviceorientation");
-    }, true);
-} else if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', function () {
-        tilt([event.acceleration.x * 2, event.acceleration.y * 2]);
-        alert("devicemotion");
-    }, true);
-} else {
-    window.addEventListener("MozOrientation", function () {
-        tilt([orientation.x * 50, orientation.y * 50]);
-        alert("MozOrientation");
-    }, true);
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180]
+  var y = event.gamma;
+  alert("motion happened!");
+
 }
 
-window.addEventListener("devicemotion", function(event){
-    if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
-      gyroPresent = true;
-      createView();
-});
+// window.addEventListener("devicemotion", function(event){
+//     if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
+//       gyroPresent = true;
+//       createView();
+// });
 
 var xpos = 0;
 var ypos = 0;
@@ -232,7 +224,6 @@ function findScreenCoords(mouseEvent) {
     newx = window.event.screenX;
     newy = window.event.screenY;
   }
-
   if( (Math.abs(newx - xpos) > 100) || (Math.abs(newy - ypos) > 100) ) {
     window.xpos = newx;
     window.ypos = newy;
