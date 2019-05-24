@@ -20,10 +20,12 @@ var colorCombos = [
     second:"#FB9FA4",
     third:"#F0EAD6"
   },
+  // colors from Finding Shore album cover
   {
-    first:"#F7A583",
-    second:"#A4C994",
-    third:"#CAC1BE"
+    first:"#ECC36B", // gold
+    second:"#539EC5", // lighter blue
+    third: "white",
+    //third:"#0F6FC6" // darker blue
   },
   {
     first:"white",
@@ -47,13 +49,7 @@ function getCanvasDimensions(bWidth, bHeight) {
     }
     cWidth = (cHeight * aspectRatio);
   } else {
-    // portrait mode so width is limiting dimension
-    if(bWidth > 555) {
-      cWidth = 500;
-    }
-    else {
-      cWidth = (bWidth * .9);
-    }
+    cWidth = (bWidth * .9);
     cHeight = (cWidth / aspectRatio);
   }
 

@@ -19,10 +19,12 @@ var colorCombos = [
     second:"#FB9FA4",
     third:"#F0EAD6"
   },
+  // colors from Finding Shore album cover
   {
-    first:"#F7A583",
-    second:"#A4C994",
-    third:"#CAC1BE"
+    first:"#ECC36B", // gold
+    second:"#539EC5", // lighter blue
+    third: "white",
+    // third:"#0F6FC6" // darker blue
   },
   {
     first:"white",
@@ -91,10 +93,10 @@ function drawMidRect(w,h,color,id) {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    var x = (w / 5) * 2;
-    var y = (h / 6);
-    var width = (w / 5) + 1;
-    var height = (h / 6) * 5;
+    x = (w / 5) * 2;
+    y = (h / 6);
+    width = (w / 5) + 1;
+    height = (h / 6) * 5;
 
     ctx.fillStyle = color;
     // x, y, w, h
@@ -109,14 +111,14 @@ function drawWall(w,h,color,id) {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    var x1 = (w / 5) * 3;
-    var y1 = (h / 6) * 1;
-    var x2 = (w / 5) * 3;
-    var y2 = h;
-    var x3 = (w / 5) * 5;
-    var y3 = h;
-    var x4 = (w / 5) * 5;
-    var y4 = 0;
+    x1 = (w / 5) * 3;
+    y1 = (h / 6) * 1;
+    x2 = (w / 5) * 3;
+    y2 = h;
+    x3 = (w / 5) * 5;
+    y3 = h;
+    x4 = (w / 5) * 5;
+    y4 = 0;
 
     ctx.beginPath();
     ctx.moveTo(x1, y1);
@@ -135,14 +137,14 @@ function drawBottomSill(w,h,color,id) {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    var x1 = w;
-    var y1 = h;
-    var x2 = w;
-    var y2 = (h / 6) * 5;
-    var x3 = (w / 5);
-    var y3 = (h / 6) * 5;
-    var x4 = 0;
-    var y4 = h;
+    x1 = w;
+    y1 = h;
+    x2 = w;
+    y2 = (h / 6) * 5;
+    x3 = (w / 5);
+    y3 = (h / 6) * 5;
+    x4 = 0;
+    y4 = h;
 
     ctx.beginPath();
     ctx.moveTo(x1, y1);
@@ -161,14 +163,14 @@ function drawLeftSill(w,h,color,id) {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    var x1 = 0;
-    var y1 = 0;
-    var x2 = (w / 5);
-    var y2 = 0;
-    var x3 = (w / 5);
-    var y3 = h;
-    var x4 = 0;
-    var y4 = h;
+    x1 = 0;
+    y1 = 0;
+    x2 = (w / 5);
+    y2 = 0;
+    x3 = (w / 5);
+    y3 = h;
+    x4 = 0;
+    y4 = h;
 
     ctx.beginPath();
     ctx.moveTo(x1, y1);
