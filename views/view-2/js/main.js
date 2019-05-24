@@ -206,9 +206,6 @@ function handleOrientation(event) {
     window.yTilt = newyTilt;
     createView();
   }
-
-  createView();
-
 }
 
 var xpos = 0;
