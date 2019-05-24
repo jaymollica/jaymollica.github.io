@@ -201,7 +201,7 @@ function handleOrientation(event) {
   var newyTilt = event.gamma;
   var gyroPresent = true;
 
-  if( (Math.abs(newxTilt - xTilt) > 20) || (Math.abs(newyTilt - yTilt) > 100) ) {
+  if( (Math.abs(newxTilt - xTilt) > 10) || (Math.abs(newyTilt - yTilt) > 10) ) {
     window.xTilt = newxTilt;
     window.yTilt = newyTilt;
     createView();
