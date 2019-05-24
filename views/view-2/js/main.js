@@ -190,6 +190,24 @@ function createView() {
 }
 
 var gyroPresent = false;
+
+if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function () {
+        tilt([event.beta, event.gamma]);
+        alert("deviceorientation");
+    }, true);
+} else if (window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', function () {
+        tilt([event.acceleration.x * 2, event.acceleration.y * 2]);
+        alert("devicemotion");
+    }, true);
+} else {
+    window.addEventListener("MozOrientation", function () {
+        tilt([orientation.x * 50, orientation.y * 50]);
+        alert("MozOrientation");
+    }, true);
+}
+
 window.addEventListener("devicemotion", function(event){
     if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
       gyroPresent = true;
