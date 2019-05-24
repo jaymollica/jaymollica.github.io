@@ -189,6 +189,13 @@ function createView() {
   drawBottomSill(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
 }
 
+var gyroPresent = false;
+window.addEventListener("devicemotion", function(event){
+    if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
+      gyroPresent = true;
+      createView();
+});
+
 var xpos = 0;
 var ypos = 0;
 
@@ -215,7 +222,9 @@ function findScreenCoords(mouseEvent) {
   }
 }
 
-document.getElementById("view-1").onmousemove = findScreenCoords;
+if(gyroPresent === false) {
+  document.getElementById("view-1").onmousemove = findScreenCoords;
+}
 
 
 createView();
