@@ -193,10 +193,19 @@ var gyroPresent = false;
 
 window.addEventListener("deviceorientation", handleOrientation, true);
 
+var xTilt = 0;  // In degree in the range [-180,180]
+var yTilt = 0;
+
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180]
-  var y = event.gamma;
+  var newxTilt = event.beta;  // In degree in the range [-180,180]
+  var newyTilt = event.gamma;
   var gyroPresent = true;
+
+  if( (Math.abs(newxTilt - xTilt) > 20) || (Math.abs(newyTilt - yTilt) > 100) ) {
+    window.xTilt = newxTilt;
+    window.yTilt = newyTilt;
+    createView();
+  }
 
   createView();
 
