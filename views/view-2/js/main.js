@@ -196,15 +196,11 @@ window.addEventListener("deviceorientation", handleOrientation, true);
 function handleOrientation(event) {
   var x = event.beta;  // In degree in the range [-180,180]
   var y = event.gamma;
-  alert("motion happened!");
+  var gyroPresent = true;
+
+  createView();
 
 }
-
-// window.addEventListener("devicemotion", function(event){
-//     if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
-//       gyroPresent = true;
-//       createView();
-// });
 
 var xpos = 0;
 var ypos = 0;
