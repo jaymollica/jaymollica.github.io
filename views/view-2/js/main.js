@@ -187,23 +187,38 @@ function createView() {
   drawWall(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
   drawLeftSill(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
   drawBottomSill(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
+  console.log("tone!");
+
+  var timing = 250;
+  var notes = ["C", "E", "G"]
+  var octaves = [3,4,5,6];
+  note = notes[Math.floor(Math.random() * notes.length)];
+  octave = octaves[Math.floor(Math.random() * octaves.length)];;
+  tones.type = "triangle";
+  tones.attack = 300;
+  tones.release = 300;
+  tones.play(
+    note,
+    octave
+  );
 }
 
 var gyroPresent = false;
 
 window.addEventListener("deviceorientation", handleOrientation, true);
 
-var xTilt = 0;  // In degree in the range [-180,180]
-var yTilt = 0;
+var beta = 90;  // In degree in the range [-180,180]
+var alpha = 0;
 
 function handleOrientation(event) {
-  var newxTilt = event.beta;  // In degree in the range [-180,180]
-  var newyTilt = event.gamma;
+  
+  var newBeta = event.beta;  // In degree in the range [-180,180]
+  var newAlpha = event.alpha;
   var gyroPresent = true;
 
-  if( (Math.abs(newxTilt - xTilt) > 10) || (Math.abs(newyTilt - yTilt) > 10) ) {
-    window.xTilt = newxTilt;
-    window.yTilt = newyTilt;
+  if( (Math.abs(newBeta - beta) > 10) || (Math.abs(newAlpha - alpha) > 10) ) {
+    window.beta = newBeta;
+    window.alpha = newAlpha;
     createView();
   }
 }

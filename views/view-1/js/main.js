@@ -48,13 +48,7 @@ function getCanvasDimensions(bWidth, bHeight) {
     }
     cWidth = (cHeight * aspectRatio);
   } else {
-    // portrait mode so width is limiting dimension
-    if(bWidth > 555) {
-      cWidth = 500;
-    }
-    else {
-      cWidth = (bWidth * .9);
-    }
+    cWidth = (bWidth * .9);
     cHeight = (cWidth / aspectRatio);
   }
 

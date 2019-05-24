@@ -2,8 +2,8 @@
 var aspectRatio = 5 / 6;
 
 // get browser window info
-var bWidth = window.innerWidth / 3;
-var bHeight = window.innerHeight / 3;
+var browserWidth = window.innerWidth / 3;
+var browserHeight = window.innerHeight / 3;
 
 var colorCombos = [
   {
@@ -22,7 +22,7 @@ var colorCombos = [
   // colors from Finding Shore album cover
   {
     first:"#ECC36B", // gold
-    second:"#539EC5", // lighter blue
+    second:"#F7A583", // dusty rose
     third: "white",
     // third:"#0F6FC6" // darker blue
   },
@@ -33,27 +33,27 @@ var colorCombos = [
   },
 ];
 
-function getCanvasDimensions(bWidth, bHeight) {
+function getCanvasDimensions(browserWidth, browserHeight) {
   // all measurements are proportionate to canvas h / w
   var cWidth;
   var cHeight;
 
-  if (bWidth > bHeight) {
+  if (browserWidth > browserHeight) {
     // landscape mode so height is limiting dimension
-    if(bHeight > 660) {
+    if(browserHeight > 660) {
       cHeight = 600;
     }
     else {
-      cHeight = (bHeight * .9);
+      cHeight = (browserHeight * .9);
     }
     cWidth = (cHeight * aspectRatio);
   } else {
     // portrait mode so width is limiting dimension
-    if(bWidth > 555) {
+    if(browserWidth > 555) {
       cWidth = 500;
     }
     else {
-      cWidth = (bWidth * .9);
+      cWidth = (browserWidth * .9);
     }
     cHeight = (cWidth / aspectRatio);
   }
@@ -67,7 +67,7 @@ function getCanvasDimensions(bWidth, bHeight) {
 
 }
 
-canvasDimensions = getCanvasDimensions(bWidth, bHeight);
+canvasDimensions = getCanvasDimensions(browserWidth, browserHeight);
 
 document.getElementById('view-1').width = canvasDimensions.width;
 document.getElementById('view-1').height = canvasDimensions.height;
