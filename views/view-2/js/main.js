@@ -187,7 +187,6 @@ function createView() {
   drawWall(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
   drawLeftSill(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
   drawBottomSill(canvasDimensions.width, canvasDimensions.height, randomColor(colors));
-  console.log("tone!");
 
   var timing = 250;
   var notes = ["C", "E", "G"]
@@ -216,7 +215,7 @@ function handleOrientation(event) {
   var newAlpha = event.alpha;
   var gyroPresent = true;
 
-  if( (Math.abs(newBeta - beta) > 10) || (Math.abs(newAlpha - alpha) > 10) ) {
+  if( (Math.abs(newBeta - beta) > 20) || (Math.abs(newAlpha - alpha) > 20) ) {
     window.beta = newBeta;
     window.alpha = newAlpha;
     createView();
