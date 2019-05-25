@@ -7,24 +7,20 @@ var browserHeight = window.innerHeight / 3;
 
 var colorCombos = [
   {
-    // colors from Endless Summer album cover
     first:"#FF5A30", // ~orange/red
     second:"#FEA52F", // ~orange/yellow
     third:"#E24e4e", // ~magenta
   },
     // colors from CDMX
   {
-    //first:"#E4007C", // CDMX Pink
     first: "#F7A583",
     second:"#FB9FA4",
     third:"#F0EAD6"
   },
-  // colors from Finding Shore album cover
   {
-    first:"#ECC36B", // gold
-    second:"#F7A583", // dusty rose
-    third: "white",
-    // third:"#0F6FC6" // darker blue
+    first:"white",
+    second:"#519AC7", // lighter blue
+    third:"#0F6FC6" // darker blue
   },
   {
     first:"white",

@@ -7,20 +7,16 @@ var bHeight = window.innerHeight;
 
 var colorCombos = [
   {
-    // colors from Endless Summer album cover
     first:"#FF5A30", // ~orange/red
     second:"#FEA52F", // ~orange/yellow
     third:"#E24e4e", // ~magenta
-
   },
     // colors from CDMX
   {
-    //first:"#E4007C", // CDMX Pink
     first: "#F7A583",
     second:"#FB9FA4",
     third:"#F0EAD6"
   },
-    // original colors
   {
     first:"red",
     second:"yellow",
