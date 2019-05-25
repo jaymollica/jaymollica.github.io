@@ -6,6 +6,19 @@ html,body {
   margin:0;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+canvas {
+  transition: outline .7s;
+  outline: 2px solid transparent;
+  outline-offset: 10px;
+}
+
 .main {
     height: 100%;
     width: 100%;
@@ -26,4 +39,9 @@ html,body {
     zoom: 1; /* Trigger hasLayout */
     width: 33%;
     text-align: center;
+}
+
+.saved {
+  transition: outline 1s;
+  outline: 2px solid #d4c8c9;
 }

@@ -11,7 +11,6 @@ var colorCombos = [
     second:"#FEA52F", // ~orange/yellow
     third:"#E24e4e", // ~magenta
   },
-    // colors from CDMX
   {
     first: "#F7A583",
     second:"#FB9FA4",
@@ -29,28 +28,22 @@ var colorCombos = [
   },
 ];
 
-function getCanvasDimensions(browserWidth, browserHeight) {
+function getCanvasDimensions(bWidth, bHeight) {
   // all measurements are proportionate to canvas h / w
   var cWidth;
   var cHeight;
 
-  if (browserWidth > browserHeight) {
+  if (bWidth > bHeight) {
     // landscape mode so height is limiting dimension
-    if(browserHeight > 660) {
+    if(bHeight > 660) {
       cHeight = 600;
     }
     else {
-      cHeight = (browserHeight * .9);
+      cHeight = (bHeight * .9);
     }
     cWidth = (cHeight * aspectRatio);
   } else {
-    // portrait mode so width is limiting dimension
-    if(browserWidth > 555) {
-      cWidth = 500;
-    }
-    else {
-      cWidth = (browserWidth * .9);
-    }
+    cWidth = (bWidth * .9);
     cHeight = (cWidth / aspectRatio);
   }
 
@@ -73,6 +66,10 @@ document.getElementById('view-2').height = canvasDimensions.height;
 
 document.getElementById('view-3').width = canvasDimensions.width;
 document.getElementById('view-3').height = canvasDimensions.height;
+
+window.onload = function() {
+  document.body.classList.remove('preload');
+}
 
 function fillBackground(color, id) {
   var canvas = document.getElementById(id);
@@ -180,6 +177,30 @@ function drawLeftSill(w,h,color,id) {
   }
 }
 
+function getBase64Image(img,id) {
+    var canvas = document.getElementById(id);
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+function toggleOutline(elem) {
+  if (elem.classList.contains('saved')) {
+    elem.classList.remove('saved');
+    localStorage.removeItem(elem.id);
+  }
+  else {
+    elem.classList.add('saved');
+    var canvas = document.getElementById(elem.id);
+    var image = new Image();
+    image.id = "pic"
+    image.src = canvas.toDataURL();
+    document.getElementById(elem.id).appendChild(image);
+    imgData = getBase64Image(image, elem.id);
+    localStorage.setItem(elem.id, imgData);
+  }
+}
+
 // choose a random color combo
 var colors = colorCombos[Math.floor(Math.random() * colorCombos.length)];
 
@@ -198,5 +219,33 @@ function createView(id) {
 
 var elementIDs = ['view-1','view-2','view-3'];
 elementIDs.forEach(function(element) {
-  createView(element);
+  if(localStorage.getItem(element) === null) {
+    createView(element);
+  }
+  else {
+    var dataImage = localStorage.getItem(element);
+    path = "data:image/png;base64," + dataImage;
+    console.log(path);
+
+    image = document.createElement('img');
+    document.body.appendChild(image);
+    image.setAttribute('style','display:none');
+    image.setAttribute('alt','script div');
+    image.setAttribute("src", path);
+
+    var imgCanvas = document.getElementById(element),
+    imgContext = imgCanvas.getContext("2d");
+    imgCanvas.classList.add('saved');
+
+    // Make sure canvas is as big as the picture
+    imgCanvas.width = image.width;
+    imgCanvas.height = image.height;
+
+    // Draw image into canvas element
+    imgContext.drawImage(image, 0, 0, image.width, image.height);
+    // Save image as a data URL
+    imgInfom = imgCanvas.toDataURL("image/png");
+    localStorage.setItem("imgInfo",imgInfom);
+    document.body.removeChild(image);
+  }
 });
