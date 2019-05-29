@@ -16,11 +16,19 @@ h2 {
   margin-top: 48px;
 }
 
+.img-container {
+  text-align: center;
+}
+
 p, a {
   font-family: arial;
 }
 
 p.intro {
   font-size: 26px;
-  font-family: Georgia;
+}
+
+.code {
+  font-family: "Courier New";
+  background-color: beige;
 }

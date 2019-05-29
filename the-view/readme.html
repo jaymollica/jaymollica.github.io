@@ -7,11 +7,13 @@
   <body>
     <div class="content-wrapper">
       <h1>The View</h1>
-      <p class="intro">Interpretations of the view from my kitchen window.</p>
-      <img src="img/the-view.png" />
+      <p class="intro">Three interpretations of the view from my kitchen window.</p>
+      <div class="img-container">
+        <img src="img/the-view.png" />
+      </div>
       <ul>
         <li><a href="view-1/">View #1</a></li>
-        <li><a href="view-2/">View #2</a></li>
+        <li><a href="view-2/">View #2</a> (start here)</li>
         <li><a href="view-3/">View #3</a></li>
       </ul>
       <h2>Process</h2>
@@ -19,9 +21,11 @@
       <p>The form and palette of each view were meant to convey key principles of <a href="https://en.wikipedia.org/wiki/Gestalt_psychology#Properties" target="_blank">gestaltism</a>: reification, multistability and invariance.</p>
       <p>Interactions were meant to foreground the &ldquo;user as performer&rdquo; concepts outlined in the work of <a href="https://en.wikipedia.org/wiki/Muriel_Cooper" target="_blank">Muriel Cooper</a> and <a href="https://en.wikipedia.org/wiki/Brenda_Laurel" target="_blank">Brenda Laurel&rsquo;s</a> <i>Computers As Theater</i>.
       <p>The colors were inspired by a recent trip to Mexico City and the Endless Summer album cover.</p>
-      <img src="img/endless_summer.jpg" />
+      <div class="img-container">
+        <img src="img/endless_summer.jpg" />
+      </div>
       <h2>Set up</h2>
-      <p><i>The View</i> is a static web app, so you can download the files, <code>cd root/of/project</code> and execute <code>python -m SimpleHTTPServer</code>. It is also hosted at <a href="https://jaymollica.github.io/the-view/">jaymollica.github.io/the-view/</a>.</p>
+      <p><i>The View</i> is a static web app, so you can download the files, <span class="code">cd root/of/project</span> and execute <span class="code">python -m SimpleHTTPServer</span>. It is also hosted at <a href="https://jaymollica.github.io/the-view/">jaymollica.github.io/the-view/</a>.</p>
       <h2>Structure</h2>
       <p>The project is structured in such a way that each view can act as a stand-alone site. There is some redundancy when constructing the views (esp #2 and #3), but I felt this modular approach best serves the spirit of the project. Mostly this is vanilla JS with minimal CSS / HTML. To save some time, I used <a href="https://github.com/bit101/tones" target="_blank">tones.js</a> in View #2 to wire up the audio interaction.</p>
       <ul>
