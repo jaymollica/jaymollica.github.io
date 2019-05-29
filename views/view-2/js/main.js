@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   // aspect ratio is 5/6
   var aspectRatio = 5 / 6;
@@ -178,9 +178,41 @@
       );
     },
     'handleOrientationEvent': function(event) {
-      console.log(event.absolute);
-      this.soundTone();
-      this.init(ctx,colors,canvasSize);
+    
+      if( (Math.abs(event.beta - beta) > 20) || (Math.abs(event.alpha - alpha) > 20) || (Math.abs(event.gamma - gamma) > 20) ) {
+        beta = event.beta;
+        alpha = event.alpha;
+        gamma = event.gamma;
+
+        this.init(ctx,colors,canvasSize);
+        this.soundTone();
+      }
+
+    },
+    'handleMousemoveEvent': function(event) {
+      var newx;
+      var newy;
+      if (event)
+      {
+        //FireFox
+        newx = event.screenX;
+        newy = event.screenY;
+      }
+      else
+      {
+        //IE
+        newx = window.event.screenX;
+        newy = window.event.screenY;
+      }
+      if( (Math.abs(newx - xpos) > 100) || (Math.abs(newy - ypos) > 100) ) {
+        console.log(xpos);
+        console.log(newx);
+        xpos = newx;
+        ypos = newy;
+        this.init(ctx,colors,canvasSize);
+        this.soundTone();
+      }
+    
     },
   };
 
@@ -190,74 +222,21 @@
     
   buildView.init(ctx,colors,canvasSize);
 
-  window.addEventListener("deviceorientation", function(e) {
-    buildView.handleOrientationEvent(e);
+  // add / init gyroscope event listener
+  var beta = 90;
+  var alpha = 0;
+  var gamma = 0;
+  window.addEventListener("deviceorientation", function(event) {
+    buildView.handleOrientationEvent(event);
   }, true);
 
-  //   console.log(event.beta);
-  //   console.log(event.alpha);
-  //   console.log(event.gamma);
+  // add / init mouse movement listener
+  var xpos = 0;
+  var ypos = 0;
+  window.addEventListener("mousemove", function() {
+    buildView.handleMousemoveEvent(event);
+  }, true);
 
-  //   buildView.soundTone();
-  //   buildView.init(ctx,colors,canvasSize);
-  // }, true);
-
-
-  // var gyroPresent = false;
-
-  // window.addEventListener("deviceorientation", handleOrientation, true);
-
-  // var beta = 90;  // In degree in the range [-180,180]
-  // var alpha = 0;
-
-  // function handleOrientation(event) {
-  //   console.log('its happening');
-    
-  //   var newBeta = event.beta;  // In degree in the range [-180,180]
-  //   var newAlpha = event.alpha;
-  //   var gyroPresent = true;
-
-  //   console.log(newBeta);
-
-  //   if( (Math.abs(newBeta - beta) > 20) || (Math.abs(newAlpha - alpha) > 20) ) {
-  //     window.beta = newBeta;
-  //     window.alpha = newAlpha;
-  //     createView();
-  //   }
-  // }
-
-  // var xpos = 0;
-  // var ypos = 0;
-
-  // function findScreenCoords(mouseEvent) {
-  //   var newx;
-  //   var newy;
-  //   if (mouseEvent)
-  //   {
-  //     //FireFox
-  //     newx = mouseEvent.screenX;
-  //     newy = mouseEvent.screenY;
-  //   }
-  //   else
-  //   {
-  //     //IE
-  //     newx = window.event.screenX;
-  //     newy = window.event.screenY;
-  //   }
-  //   if( (Math.abs(newx - xpos) > 100) || (Math.abs(newy - ypos) > 100) ) {
-  //     window.xpos = newx;
-  //     window.ypos = newy;
-  //     createView();
-  //   }
-  // }
-
-  // if(gyroPresent === false) {
-  //   document.getElementById("view-1").onmousemove = findScreenCoords;
-  // }
-
-
-  // createView();
-
-})();
+})(window);
 
 
