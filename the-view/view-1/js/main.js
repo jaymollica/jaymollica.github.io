@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   // aspect ratio is 5/6
   var aspectRatio = 5 / 6;
@@ -107,5 +107,4 @@
   
   buildView.init(ctx,colors,canvasSize);
 
-})();
-
+})(window);

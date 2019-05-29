@@ -165,6 +165,7 @@
 
     },
     soundTone: function() {
+
       notes = ["C", "E", "G"]
       octaves = [3,4,5,6];
       note = notes[Math.floor(Math.random() * notes.length)];
@@ -178,7 +179,7 @@
       );
     },
     'handleOrientationEvent': function(event) {
-    
+
       if( (Math.abs(event.beta - beta) > 20) || (Math.abs(event.alpha - alpha) > 20) || (Math.abs(event.gamma - gamma) > 20) ) {
         beta = event.beta;
         alpha = event.alpha;
@@ -190,6 +191,7 @@
 
     },
     'handleMousemoveEvent': function(event) {
+      
       var newx;
       var newy;
       if (event)
@@ -205,8 +207,6 @@
         newy = window.event.screenY;
       }
       if( (Math.abs(newx - xpos) > 100) || (Math.abs(newy - ypos) > 100) ) {
-        console.log(xpos);
-        console.log(newx);
         xpos = newx;
         ypos = newy;
         this.init(ctx,colors,canvasSize);
@@ -238,5 +238,3 @@
   }, true);
 
 })(window);
-
-
