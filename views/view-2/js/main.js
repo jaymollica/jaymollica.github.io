@@ -110,7 +110,7 @@
       // set boundaries of rect
       x = (w / 5) * 2;
       y = (h / 6);
-      width = (w / 5);
+      width = (w / 5) + 1;
       height = (h / 6) * 5;
 
       ctx.fillStyle = color;
