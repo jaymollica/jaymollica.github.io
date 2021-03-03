@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>D3 Sketches: What are you wearing?</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+
+    h2, table {
+      margin-left:3rem;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div id="dataviz">
+    <h2>Words (x) per article (y)</h2>
+  </div>
+
+  <div id="pieviz">
+    <h2>Color pie</h2>
+  </div>
+
+  <div id="country">
+    <h2>Words per country</h2>
+    <table>
+      <tr><td>USA</td><td>63</td><td>9</td><td>7.00</td></tr>
+      <tr><td>China</td><td>46</td><td>7</td><td>6.57</td></tr>
+      <tr><td>Slovenia</td><td>5</td><td>1</td><td>5.00</td></tr>
+      <tr><td>Mexico</td><td>9</td><td>1</td><td>9.00</td></tr>
+      <tr><td>Total</td><td>123</td><td>18</td><td>6.83</td></tr>
+    </table>
+  </div>
+  
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/vendor/d3/d3.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jay.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

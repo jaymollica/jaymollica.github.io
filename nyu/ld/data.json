@@ -1,0 +1,353 @@
+{
+    "lowResData": [
+        {
+            "date": "2021/02/23 1:05:07 AM EST",
+            "entry": "Woolen coat + thin sweater + shirt",
+            "location": "Shanghai",
+            "brands": [],
+            "articles": 3,
+            "country": "China",
+            "colors": [],
+            "words": 5,
+            "outdoor": true,
+            "leisure": false,
+            "footwear": true,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 3:27:22 AM EST",
+            "entry": "T-shirt,  underwear and slipper",
+            "location": "Shenzhen",
+            "brands": [],
+            "articles": 3,
+            "country": "China",
+            "colors": [],
+            "words": 4,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": true,
+            "footwear": true,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 4:18:28 AM EST",
+            "entry": "Some combination of sweats (sweatpants/shirts), thermals, and unending isolation",
+            "location": "Cincinnati, OH",
+            "brands": [],
+            "articles": 3,
+            "country": "USA",
+            "colors": [],
+            "words": 10,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": true,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 4:43:10 AM EST",
+            "entry": "White sweater and blue pants",
+            "location": "Ljubljana",
+            "brands": [],
+            "articles": 2,
+            "country": "Slovenia",
+            "colors": [
+                "white",
+                "blue"
+            ],
+            "words": 5,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 5:49:02 AM EST",
+            "entry": "A faux-fur collared blue and gold brocade coat over a black suit with a broken T-shirt and orange and brown sneakers",
+            "location": "Shanghai",
+            "brands": [],
+            "articles": 4,
+            "country": "China",
+            "colors": [
+                "blue",
+                "gold",
+                "black",
+                "orange",
+                "brown"
+            ],
+            "words": 21,
+            "outdoor": true,
+            "leisure": false,
+            "underwear": false,
+            "footwear": true,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 6:43:47 AM EST",
+            "entry": "Yellow and grey flannel pajama pants and a salmon cotton t-shirt that says Stone Harbor",
+            "location": "Chicago",
+            "brands": [],
+            "articles": 2,
+            "country": "USA",
+            "colors": [
+                "yellow",
+                "gray",
+                "salmon"
+            ],
+            "words": 15,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 7:05:41 AM EST",
+            "entry": "Coat, down jacket",
+            "location": "Shanghai,China",
+            "brands": [],
+            "articles": 2,
+            "country": "China",
+            "colors": [],
+            "words": 3,
+            "outdoor": true,
+            "leisure": false,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 7:56:50 AM EST",
+            "entry": "Black hoodie, gray pants, blue tshirt and sport tennis",
+            "location": "Mexico city",
+            "brands": [],
+            "articles": 4,
+            "country": "Mexico",
+            "colors": [
+                "black",
+                "gray",
+                "blue"
+            ],
+            "words": 9,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 10:49:37 AM EST",
+            "entry": "Uniqlo black light down jacket, dark royal blue leggings",
+            "location": "Shanghai",
+            "brands": [
+                "Uniqlo"
+            ],
+            "articles": 2,
+            "country": "China",
+            "colors": [
+                "black",
+                "dark royal blue"
+            ],
+            "words": 9,
+            "outdoor": true,
+            "leisure": false,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 10:56:03 AM EST",
+            "entry": "Black sweats, vintage black t, boots",
+            "location": "Nyc",
+            "brands": [],
+            "articles": 3,
+            "country": "USA",
+            "colors": [
+                "black"
+            ],
+            "words": 5,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": true,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 12:11:46 PM EST",
+            "entry": "Pajamas",
+            "location": "La Jolla, CA",
+            "brands": [],
+            "articles": 1,
+            "country": "USA",
+            "colors": [],
+            "words": 1,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 3:11:35 PM EST",
+            "entry": "two pairs of purple socks, orange sweatpants, gray sweatshirt, black hoodie",
+            "location": "sag harbor, ny",
+            "brands": [],
+            "articles": 4,
+            "country": "USA",
+            "colors": [
+                "purple",
+                "orange",
+                "gray",
+                "black"
+            ],
+            "words": 11,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": true,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 4:31:47 PM EST",
+            "entry": "grey pullover and Adidas trackpants",
+            "location": "NYC",
+            "brands": [
+                "Adidas"
+            ],
+            "articles": 2,
+            "country": "USA",
+            "colors": [
+                "gray"
+            ],
+            "words": 5,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 8:03:15 PM EST",
+            "entry": "Blue sweatpants, white t shirt, zip sweatshirt",
+            "location": "Bellevue",
+            "brands": [],
+            "articles": 3,
+            "country": "USA",
+            "colors": [
+                "blue",
+                "white"
+            ],
+            "words": 6,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/23 10:22:21 PM EST",
+            "entry": "black turtle neck",
+            "location": "shanghai",
+            "brands": [],
+            "articles": 1,
+            "country": "China",
+            "colors": [
+                "black"
+            ],
+            "words": 3,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/24 12:55:13 AM EST",
+            "entry": "hoodie",
+            "location": "shanghai",
+            "brands": [],
+            "articles": 1,
+            "country": "China",
+            "colors": [],
+            "words": 1,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/26 8:55:42 AM EST",
+            "entry": "Black T-Shirt and Nike Athletic Pants",
+            "location": "Austin, TX",
+            "brands": [
+                "Nike"
+            ],
+            "articles": 2,
+            "country": "USA",
+            "colors": [
+                "black"
+            ],
+            "words": 6,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        },
+        {
+            "date": "2021/02/26 6:15:56 PM EST",
+            "entry": "beige hoodie, black pants",
+            "location": "RIGHT now i am in Portsmouth, VA ;) ",
+            "brands": [],
+            "articles": 2,
+            "country": "USA",
+            "colors": [
+                "beige",
+                "black"
+            ],
+            "words": 4,
+            "outdoor": false,
+            "leisure": true,
+            "underwear": false,
+            "footwear": false,
+            "haydenURI": [],
+            "JayURI": []
+        }
+    ],
+    "fbData": [
+        {
+            "location": "NYC",
+            "answer": "sweatshirt, sweatpants"
+        },
+        {
+            "location": "Miami",
+            "answer": [
+                "This is a test, by Jay but: red tricot adidas track pants, a chicano batman t shirt and crocs",
+                "piyama",
+                "piyama",
+                "Pajamas",
+                "Nail polish",
+                "jean, a stripes T shirt and thong sandals"
+            ]
+        }
+    ]
+}
