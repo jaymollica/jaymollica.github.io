@@ -1,0 +1,252 @@
+@import 'fonts';
+@import	'colors';
+
+@mixin font-smoothing($value: true) {
+	@if ($value == true) {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	} @else {
+		-moz-osx-font-smoothing: auto;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+
+html, body {
+	font-family: 'SFMOMAText';
+	background-color: $site-bg;
+	color: $gray-darkest;
+	min-height: 100vh;
+	width: 100%;
+	font-size: 12px;
+	text-rendering: optimizeLegibility !important;
+	@include font-smoothing(true);
+}
+
+h1, h2, h3, h4 {
+	font-family: 'SFMOMADisplayRegular';
+	font-weight: normal;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.content-container {
+    position: relative;
+    background: #f8f8f8;
+    padding-top: 24px;
+}
+
+.container-after-hero {
+    margin-top: 16px
+}
+
+.row-centered {
+    text-align: center
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    text-align: left;
+    vertical-align: top;
+    margin-right: -4px
+}
+
+@media (max-width: 767px) {
+    .col-centered {
+        display:block;
+        margin-right: 0
+    }
+}
+
+h2,.h2 {
+    font-family: 'SFMOMADisplayRegular';
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #39494c
+}
+
+
+h3,.h3 {
+    font-family: 'SFMOMADisplayRegular';
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: #39494c
+}
+
+.text {
+    position: relative;
+    min-height: 1px
+}
+
+.text {
+    font-family: 'SFMOMAText';
+    font-variant-numeric: lining-nums;
+    -ms-font-feature-settings: "lnum" 1;
+    -o-font-feature-settings: "lnum" 1;
+    -webkit-font-feature-settings: "lnum" 1;
+    font-feature-settings: "lnum" 1;
+    font-size: 12px;
+    line-height: 24px;
+    color: #39494c;
+    margin-bottom: 24px;
+}
+
+.text h1,.text .h1 {
+    margin-top: 24px;
+}
+
+.text h2,.text .h2 {
+    margin-top: 24px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+a {
+    color: #ff483b;
+    text-decoration: none
+}
+
+a:hover,a:focus {
+    text-decoration: none;
+    color: #f90900
+}
+
+::selection {
+    background: #ffbfbb;
+    color: #232828;
+    text-shadow: none
+}
+
+li.key {
+    border-top-width: 15px;
+    border-top-style: solid;
+    font-size: .75em;
+    width: 10%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer {
+    position: relative;
+    background: #ff483b;
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+.footer-lower-links {
+    float: left;
+    margin: 0 -12px
+}
+
+.footer-lower-links li {
+    font-family: 'SFMOMADisplayRegular';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #39494c;
+    line-height: 1;
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    padding: 0 12px
+}
+
+.footer-lower-links li:last-child {
+    border-right: none
+}
+
+.footer-lower-links li a {
+    color: #fff
+}
+
+
+/*d3.js stuff*/
+.chart {
+    margin-bottom: 24px;
+}
+
+.toolTip {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #6F257F;
+    padding: 14px;
+    text-align: center;
+}
+
+.pie-chart {
+    height: 300px;
+}
+
+.area {
+    fill: rgba(255, 72, 59, 0.4);
+}
+
+.axis-label {
+    text-anchor: middle;
+    font-family: 'SFMOMADisplayBold';
+    font-size: 0.9rem;
+}
+
+.line {
+    fill: none;
+    stroke-width: 2px;
+    /*stroke: steelblue;*/
+}
+
+.collection-1-line {
+    stroke: #78BCDC;
+}
+
+.deathDate-line {
+    stroke: #E6A2C5;
+}
+
+.groupDate-line {
+    stroke: #76A08A;
+}
+
+.accession-year-line {
+    stroke: rgb(255, 72, 59);
+    stroke-width: 1px;
+}
+
+#nationality {
+    text-align: center;
+}
+
+.countries {
+    fill: rgb(190, 202, 202);
+    stroke: #E8D2B9;
+}
+
+#nationality-legend {
+    padding: 1.5em 0 0 1.5em;
+}
+
+/*for testing*/
+.selected {
+    fill: #D1362F;
+}
+
+.horizontal-chart-title {
+	font-size:16px;
+	font-family:'SFMOMADisplayRegular';
+	fill: $gray;
+	@include font-smoothing(on);
+}
