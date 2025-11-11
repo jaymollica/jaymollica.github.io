@@ -192,4 +192,9 @@ li p {
 .duration {
   float: right; }
 
+li ul.accomplishments {
+  margin-left: 1em;
+  list-style: square;
+}
+
 /*# sourceMappingURL=jay.css.map */
